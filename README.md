@@ -257,4 +257,3 @@ Tests use a tiny in-house framework in [test/test_common.h](test/test_common.h) 
 | `protocol`           | `status_payload_t`, `alert_payload_t`, `packet_type_t` | `protocol_serialize_status / _alert`, `protocol_deserialize`, `protocol_checksum` |
 | `hal` (stub/arduino) | `hal_light_t`, `hal_direction_t`            | `hal_init / hal_set_light / hal_button_pressed / hal_ultrasonic_distance_cm / …` |
 
-**Powodzenia na hackathonie! / Good luck at the hackathon!** 🚦
