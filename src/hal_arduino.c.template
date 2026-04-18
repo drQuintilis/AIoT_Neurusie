@@ -1,0 +1,89 @@
+/* Arduino backend skeleton for the HAL.
+ *
+ * Rename this file to hal_arduino.c (or hal_arduino.cpp) and drop it into
+ * the Arduino sketch when you actually have the hardware. Keep hal_stub.c
+ * out of that build — only one backend gets compiled at a time.
+ *
+ * Pin assignment is just a starting suggestion — confirm with the person
+ * wiring the breadboard. */
+
+#if 0  /* Enable when building for Arduino. */
+
+#include "hal.h"
+#include <Arduino.h>
+
+/* --- Pin map (EDIT to match real wiring) --- */
+#define PIN_LED_A_RED     2
+#define PIN_LED_A_YELLOW  3
+#define PIN_LED_A_GREEN   4
+#define PIN_LED_B_RED     5
+#define PIN_LED_B_YELLOW  6
+#define PIN_LED_B_GREEN   7
+#define PIN_BUZZER        8
+#define PIN_BUTTON        9
+#define PIN_HC_SR04_TRIG  10
+#define PIN_HC_SR04_ECHO  11
+#define PIN_TEMT6000      A0
+/* HC595 display pins: DATA, LATCH, CLOCK */
+#define PIN_DISP_DATA     12
+#define PIN_DISP_LATCH    13
+#define PIN_DISP_CLOCK    A1
+
+static void set_dir_pins(uint8_t r, uint8_t y, uint8_t g, hal_light_t color) {
+    digitalWrite(r, color == HAL_LIGHT_RED    ? HIGH : LOW);
+    digitalWrite(y, color == HAL_LIGHT_YELLOW ? HIGH : LOW);
+    digitalWrite(g, color == HAL_LIGHT_GREEN  ? HIGH : LOW);
+}
+
+void hal_init(void) {
+    const uint8_t outputs[] = {
+        PIN_LED_A_RED, PIN_LED_A_YELLOW, PIN_LED_A_GREEN,
+        PIN_LED_B_RED, PIN_LED_B_YELLOW, PIN_LED_B_GREEN,
+        PIN_BUZZER, PIN_HC_SR04_TRIG,
+        PIN_DISP_DATA, PIN_DISP_LATCH, PIN_DISP_CLOCK
+    };
+    for (uint8_t i = 0; i < sizeof(outputs); i++) pinMode(outputs[i], OUTPUT);
+    pinMode(PIN_BUTTON, INPUT_PULLUP);
+    pinMode(PIN_HC_SR04_ECHO, INPUT);
+}
+
+uint32_t hal_millis(void)            { return millis(); }
+void     hal_delay_ms(uint32_t ms)   { delay(ms); }
+
+void hal_set_light(hal_direction_t dir, hal_light_t color) {
+    if (dir == HAL_DIR_A) {
+        set_dir_pins(PIN_LED_A_RED, PIN_LED_A_YELLOW, PIN_LED_A_GREEN, color);
+    } else {
+        set_dir_pins(PIN_LED_B_RED, PIN_LED_B_YELLOW, PIN_LED_B_GREEN, color);
+    }
+}
+
+void hal_set_alarm(bool on) {
+    if (on) tone(PIN_BUZZER, 1000);
+    else    noTone(PIN_BUZZER);
+}
+
+void hal_display_number(uint16_t value) {
+    /* TODO: shift out 4 digits via HC595 (DATA/LATCH/CLOCK). */
+    (void)value;
+}
+
+bool hal_button_pressed(void) {
+    /* INPUT_PULLUP: pressed = LOW. */
+    return digitalRead(PIN_BUTTON) == LOW;
+}
+
+uint16_t hal_ultrasonic_distance_cm(void) {
+    digitalWrite(PIN_HC_SR04_TRIG, LOW);  delayMicroseconds(2);
+    digitalWrite(PIN_HC_SR04_TRIG, HIGH); delayMicroseconds(10);
+    digitalWrite(PIN_HC_SR04_TRIG, LOW);
+    unsigned long dur = pulseIn(PIN_HC_SR04_ECHO, HIGH, 30000UL); /* 30ms timeout */
+    if (dur == 0) return 0;
+    return (uint16_t)(dur / 58);  /* ~58us per cm round-trip */
+}
+
+uint16_t hal_light_sensor(void) {
+    return (uint16_t)analogRead(PIN_TEMT6000);
+}
+
+#endif /* 0 */
