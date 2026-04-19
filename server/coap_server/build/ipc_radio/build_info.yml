@@ -1,0 +1,56 @@
+cmake:
+  application:
+    configuration-dir: '/home/daniel/ncs/330rc2/nrf/applications/ipc_radio'
+    source-dir: '/home/daniel/ncs/330rc2/nrf/applications/ipc_radio'
+  board:
+    name: 'nrf7002dk'
+    path:
+     - '/home/daniel/ncs/330rc2/zephyr/boards/nordic/nrf7002dk'
+    qualifiers: 'nrf5340/cpunet'
+    revision: ''
+  devicetree:
+    bindings-dirs:
+     - '/home/daniel/ncs/330rc2/nrf/dts/bindings'
+     - '/home/daniel/ncs/330rc2/zephyr/dts/bindings'
+    files:
+     - '/home/daniel/ncs/330rc2/zephyr/boards/nordic/nrf7002dk/nrf7002dk_nrf5340_cpunet.dts'
+    include-dirs:
+     - '/home/daniel/ncs/330rc2/nrf/include'
+     - '/home/daniel/ncs/330rc2/nrf/dts/common'
+     - '/home/daniel/ncs/330rc2/nrf/dts/riscv'
+     - '/home/daniel/ncs/330rc2/nrf/dts/arm'
+     - '/home/daniel/ncs/330rc2/nrf/dts'
+     - '/home/daniel/ncs/330rc2/zephyr/include'
+     - '/home/daniel/ncs/330rc2/zephyr/include/zephyr'
+     - '/home/daniel/ncs/330rc2/zephyr/dts/common'
+     - '/home/daniel/ncs/330rc2/zephyr/dts/vendor'
+     - '/home/daniel/ncs/330rc2/zephyr/dts/rx'
+     - '/home/daniel/ncs/330rc2/zephyr/dts/x86'
+     - '/home/daniel/ncs/330rc2/zephyr/dts/xtensa'
+     - '/home/daniel/ncs/330rc2/zephyr/dts/sparc'
+     - '/home/daniel/ncs/330rc2/zephyr/dts/riscv'
+     - '/home/daniel/ncs/330rc2/zephyr/dts/posix'
+     - '/home/daniel/ncs/330rc2/zephyr/dts/arm64'
+     - '/home/daniel/ncs/330rc2/zephyr/dts/arm'
+     - '/home/daniel/ncs/330rc2/zephyr/dts/arc'
+     - '/home/daniel/ncs/330rc2/zephyr/dts'
+  kconfig:
+    extra-user-files:
+     - '/home/daniel/ncs/330rc2/nrf/applications/ipc_radio/overlay-802154.conf'
+    files:
+     - '/home/daniel/ncs/330rc2/zephyr/boards/nordic/nrf7002dk/nrf7002dk_nrf5340_cpunet_defconfig'
+     - '/home/daniel/ncs/330rc2/nrf/applications/ipc_radio/prj.conf'
+     - '/home/daniel/ncs/330rc2/nrf/applications/ipc_radio/overlay-802154.conf'
+     - '/home/daniel/ncs/330rc2/nrf/samples/openthread/coap_server/build/ipc_radio/zephyr/.config.sysbuild'
+    user-files:
+     - '/home/daniel/ncs/330rc2/nrf/applications/ipc_radio/prj.conf'
+  toolchain:
+    name: 'zephyr'
+    path: '/home/daniel/ncs/toolchains/911f4c5c26/opt/zephyr-sdk'
+  vendor-specific:
+    nordic:
+      svdfile: '/home/daniel/ncs/330rc2/modules/hal/nordic/nrfx/bsp/stable/mdk/nrf5340_network.svd'
+  zephyr:
+    version: '4.3.99'
+    zephyr-base: '/home/daniel/ncs/330rc2/zephyr'
+version: '0.1.0'

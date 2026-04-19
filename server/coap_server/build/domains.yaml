@@ -1,0 +1,10 @@
+default: coap_server
+build_dir: /home/daniel/ncs/330rc2/nrf/samples/openthread/coap_server/build
+domains:
+  - name: coap_server
+    build_dir: /home/daniel/ncs/330rc2/nrf/samples/openthread/coap_server/build/coap_server
+  - name: ipc_radio
+    build_dir: /home/daniel/ncs/330rc2/nrf/samples/openthread/coap_server/build/ipc_radio
+flash_order:
+  - ipc_radio
+  - coap_server

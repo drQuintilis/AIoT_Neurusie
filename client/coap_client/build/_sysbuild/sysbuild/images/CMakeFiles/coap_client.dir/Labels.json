@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/daniel/ncs/330rc2/nrf/samples/openthread/coap_client/build/_sysbuild/sysbuild/images/CMakeFiles/coap_client"
+		},
+		{
+			"file" : "/home/daniel/ncs/330rc2/nrf/samples/openthread/coap_client/build/_sysbuild/sysbuild/images/CMakeFiles/coap_client.rule"
+		},
+		{
+			"file" : "/home/daniel/ncs/330rc2/nrf/samples/openthread/coap_client/build/_sysbuild/sysbuild/images/CMakeFiles/coap_client-complete.rule"
+		},
+		{
+			"file" : "/home/daniel/ncs/330rc2/nrf/samples/openthread/coap_client/build/_sysbuild/sysbuild/images/coap_client-prefix/src/coap_client-stamp/coap_client-build.rule"
+		},
+		{
+			"file" : "/home/daniel/ncs/330rc2/nrf/samples/openthread/coap_client/build/_sysbuild/sysbuild/images/coap_client-prefix/src/coap_client-stamp/coap_client-configure.rule"
+		},
+		{
+			"file" : "/home/daniel/ncs/330rc2/nrf/samples/openthread/coap_client/build/_sysbuild/sysbuild/images/coap_client-prefix/src/coap_client-stamp/coap_client-download.rule"
+		},
+		{
+			"file" : "/home/daniel/ncs/330rc2/nrf/samples/openthread/coap_client/build/_sysbuild/sysbuild/images/coap_client-prefix/src/coap_client-stamp/coap_client-install.rule"
+		},
+		{
+			"file" : "/home/daniel/ncs/330rc2/nrf/samples/openthread/coap_client/build/_sysbuild/sysbuild/images/coap_client-prefix/src/coap_client-stamp/coap_client-mkdir.rule"
+		},
+		{
+			"file" : "/home/daniel/ncs/330rc2/nrf/samples/openthread/coap_client/build/_sysbuild/sysbuild/images/coap_client-prefix/src/coap_client-stamp/coap_client-patch.rule"
+		},
+		{
+			"file" : "/home/daniel/ncs/330rc2/nrf/samples/openthread/coap_client/build/_sysbuild/sysbuild/images/coap_client-prefix/src/coap_client-stamp/coap_client-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"coap_client"
+		],
+		"name" : "coap_client"
+	}
+}

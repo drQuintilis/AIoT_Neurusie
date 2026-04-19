@@ -1,0 +1,7 @@
+default: coap_client
+build_dir: /home/daniel/ncs/330rc2/nrf/samples/openthread/coap_client/build
+domains:
+  - name: coap_client
+    build_dir: /home/daniel/ncs/330rc2/nrf/samples/openthread/coap_client/build/coap_client
+flash_order:
+  - coap_client

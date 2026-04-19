@@ -1,0 +1,24 @@
+{
+  "toolchainPath": "/home/daniel/ncs/toolchains/911f4c5c26",
+  "sdkPath": "/home/daniel/ncs/330rc2",
+  "board": "nrf7002dk/nrf5340/cpuapp/ns",
+  "boardDir": "/home/daniel/ncs/330rc2/zephyr/boards/nordic/nrf7002dk",
+  "boardDirs": [
+    "/home/daniel/ncs/330rc2/zephyr/boards/nordic/nrf7002dk"
+  ],
+  "optimizations": "debug",
+  "cmakeArgs": [
+    "-Dcoap_server_CONF_FILE=prj.conf",
+    "-Dcoap_server_EXTRA_CONF_FILE=boards/nrf5340dk_nrf5340_cpuapp.conf"
+  ],
+  "confFiles": [
+    "prj.conf"
+  ],
+  "buildDirectory": "build",
+  "kconfigFragments": [
+    "boards/nrf5340dk_nrf5340_cpuapp.conf"
+  ],
+  "snippets": [],
+  "dtcOverlays": [],
+  "extraDtcOverlays": []
+}

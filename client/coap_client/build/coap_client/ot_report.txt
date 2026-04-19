@@ -1,0 +1,9 @@
+################### OPENTHREAD REPORT ###################
++ Target device: nrf54l15
++ Thread version: v1.4
++ OpenThread library feature set: Custom
++ OpenThread library has been built from sources
++ OpenThread NCS revision: ncs-thread-reference-20250402
++ OpenThread NCS SHA: 0e2666713
++ NCS SHA: e22cd5e200
+###################        END        ###################

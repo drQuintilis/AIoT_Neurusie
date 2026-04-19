@@ -1,0 +1,36 @@
+# Available runners configured by board.cmake.
+runners:
+- nrfutil
+- nrfjprog
+- jlink
+
+# Default flash runner if --runner is not given.
+flash-runner: nrfutil
+
+# Default debug runner if --runner is not given.
+debug-runner: jlink
+
+# Common runner configuration values.
+config:
+  board_dir: /home/daniel/ncs/330rc2/zephyr/boards/nordic/nrf7002dk
+  # Build outputs:
+  elf_file: zephyr.elf
+  hex_file: /home/daniel/ncs/330rc2/nrf/samples/openthread/coap_server/build/merged.hex
+  bin_file: zephyr.bin
+  # Host tools:
+  gdb: /home/daniel/ncs/toolchains/911f4c5c26/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gdb
+  openocd: /usr/bin/openocd
+  openocd_search:
+    - /home/daniel/ncs/toolchains/911f4c5c26/opt/zephyr-sdk/sysroots/x86_64-pokysdk-linux/usr/share/openocd/scripts
+
+# Runner specific arguments
+args:
+  nrfutil:
+    - --ext-mem-config-file=/home/daniel/ncs/330rc2/zephyr/boards/nordic/nrf7002dk/support/nrf7002dk_spi_nrfutil_config.json
+  nrfjprog:
+    []
+
+  jlink:
+    - --dt-flash=y
+    - --device=nrf5340_xxaa_app
+    - --speed=4000

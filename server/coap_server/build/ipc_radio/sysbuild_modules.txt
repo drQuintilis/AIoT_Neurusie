@@ -1,0 +1,2 @@
+"nrf":"/home/daniel/ncs/330rc2/nrf":"/home/daniel/ncs/330rc2/nrf/sysbuild"
+"mcuboot":"/home/daniel/ncs/330rc2/bootloader/mcuboot":"/home/daniel/ncs/330rc2/bootloader/mcuboot/boot/zephyr/sysbuild"

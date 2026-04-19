@@ -1,0 +1,13 @@
+# Target labels
+ coap_client
+# Source files and their labels
+/home/daniel/ncs/330rc2/nrf/samples/openthread/coap_client/build/_sysbuild/sysbuild/images/CMakeFiles/coap_client
+/home/daniel/ncs/330rc2/nrf/samples/openthread/coap_client/build/_sysbuild/sysbuild/images/CMakeFiles/coap_client.rule
+/home/daniel/ncs/330rc2/nrf/samples/openthread/coap_client/build/_sysbuild/sysbuild/images/CMakeFiles/coap_client-complete.rule
+/home/daniel/ncs/330rc2/nrf/samples/openthread/coap_client/build/_sysbuild/sysbuild/images/coap_client-prefix/src/coap_client-stamp/coap_client-build.rule
+/home/daniel/ncs/330rc2/nrf/samples/openthread/coap_client/build/_sysbuild/sysbuild/images/coap_client-prefix/src/coap_client-stamp/coap_client-configure.rule
+/home/daniel/ncs/330rc2/nrf/samples/openthread/coap_client/build/_sysbuild/sysbuild/images/coap_client-prefix/src/coap_client-stamp/coap_client-download.rule
+/home/daniel/ncs/330rc2/nrf/samples/openthread/coap_client/build/_sysbuild/sysbuild/images/coap_client-prefix/src/coap_client-stamp/coap_client-install.rule
+/home/daniel/ncs/330rc2/nrf/samples/openthread/coap_client/build/_sysbuild/sysbuild/images/coap_client-prefix/src/coap_client-stamp/coap_client-mkdir.rule
+/home/daniel/ncs/330rc2/nrf/samples/openthread/coap_client/build/_sysbuild/sysbuild/images/coap_client-prefix/src/coap_client-stamp/coap_client-patch.rule
+/home/daniel/ncs/330rc2/nrf/samples/openthread/coap_client/build/_sysbuild/sysbuild/images/coap_client-prefix/src/coap_client-stamp/coap_client-update.rule

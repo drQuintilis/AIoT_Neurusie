@@ -1,6 +1,0 @@
-#ifndef AIOT_NEURUSIE_LIBRARY_H
-#define AIOT_NEURUSIE_LIBRARY_H
-
-void hello(void);
-
-#endif // AIOT_NEURUSIE_LIBRARY_H

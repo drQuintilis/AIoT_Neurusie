@@ -1,0 +1,13 @@
+# Target labels
+ ipc_radio
+# Source files and their labels
+/home/daniel/ncs/330rc2/nrf/samples/openthread/coap_server/build/modules/nrf/CMakeFiles/ipc_radio
+/home/daniel/ncs/330rc2/nrf/samples/openthread/coap_server/build/modules/nrf/CMakeFiles/ipc_radio.rule
+/home/daniel/ncs/330rc2/nrf/samples/openthread/coap_server/build/modules/nrf/CMakeFiles/ipc_radio-complete.rule
+/home/daniel/ncs/330rc2/nrf/samples/openthread/coap_server/build/modules/nrf/ipc_radio-prefix/src/ipc_radio-stamp/ipc_radio-build.rule
+/home/daniel/ncs/330rc2/nrf/samples/openthread/coap_server/build/modules/nrf/ipc_radio-prefix/src/ipc_radio-stamp/ipc_radio-configure.rule
+/home/daniel/ncs/330rc2/nrf/samples/openthread/coap_server/build/modules/nrf/ipc_radio-prefix/src/ipc_radio-stamp/ipc_radio-download.rule
+/home/daniel/ncs/330rc2/nrf/samples/openthread/coap_server/build/modules/nrf/ipc_radio-prefix/src/ipc_radio-stamp/ipc_radio-install.rule
+/home/daniel/ncs/330rc2/nrf/samples/openthread/coap_server/build/modules/nrf/ipc_radio-prefix/src/ipc_radio-stamp/ipc_radio-mkdir.rule
+/home/daniel/ncs/330rc2/nrf/samples/openthread/coap_server/build/modules/nrf/ipc_radio-prefix/src/ipc_radio-stamp/ipc_radio-patch.rule
+/home/daniel/ncs/330rc2/nrf/samples/openthread/coap_server/build/modules/nrf/ipc_radio-prefix/src/ipc_radio-stamp/ipc_radio-update.rule
