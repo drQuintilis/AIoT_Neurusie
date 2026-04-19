@@ -1,0 +1,9 @@
+{
+  "format": "nrf54l15-linearq-v1",
+  "model_blob": "out/nrf54l15_intersection_model.bin",
+  "feature_count": 9,
+  "action_count": 6,
+  "weight_scale": 56,
+  "dtype_weights": "int8",
+  "dtype_action_scales": "int16"
+}
