@@ -22,6 +22,6 @@ cmake:
   sysbuild: 'true'
 version: '0.1.0'
 west:
-  command: '/home/daniel/ncs/toolchains/911f4c5c26/usr/local/bin/west build --build-dir /home/daniel/ncs/330rc2/nrf/samples/openthread/coap_server/build /home/daniel/ncs/330rc2/nrf/samples/openthread/coap_server --pristine --board nrf7002dk/nrf5340/cpuapp/ns -- -DEXTRA_CONF_FILE=boards/nrf5340dk_nrf5340_cpuapp.conf -DCONF_FILE=prj.conf -DDEBUG_THREAD_INFO=On -DCONFIG_DEBUG_OPTIMIZATIONS=y -DCONFIG_DEBUG_THREAD_INFO=y -Dcoap_server_EXTRA_CONF_FILE=boards/nrf5340dk_nrf5340_cpuapp.conf -Dcoap_server_CONF_FILE=prj.conf -Dcoap_server_DEBUG_THREAD_INFO=On -Dipc_radio_DEBUG_THREAD_INFO=Off'
+  command: '/home/daniel/ncs/toolchains/911f4c5c26/usr/local/bin/west build --build-dir /home/daniel/ncs/330rc2/nrf/samples/openthread/coap_server/build /home/daniel/ncs/330rc2/nrf/samples/openthread/coap_server --pristine --board nrf7002dk/nrf5340/cpuapp/ns -- -DEXTRA_CONF_FILE=boards/nrf5340dk_nrf5340_cpuapp.conf -DCONF_FILE=prj.conf -DDEBUG_THREAD_INFO=On -DCONFIG_DEBUG_OPTIMIZATIONS=y -DCONFIG_DEBUG_THREAD_INFO=y -Dcoap_server_EXTRA_CONF_FILE=boards/nrf5340dk_nrf5340_cpuapp.conf -Dcoap_server_CONF_FILE=prj.conf -Dcoap_server_DEBUG_THREAD_INFO=Off -Dipc_radio_DEBUG_THREAD_INFO=Off'
   topdir: '/home/daniel/ncs/330rc2'
   version: '1.5.0'

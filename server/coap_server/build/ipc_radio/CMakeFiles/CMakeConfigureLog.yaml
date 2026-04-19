@@ -5332,8 +5332,8 @@ events:
     checks:
       - "Looking for include file stdatomic.h"
     directories:
-      source: "/home/daniel/ncs/330rc2/nrf/samples/openthread/coap_server/build/ipc_radio/CMakeFiles/CMakeScratch/TryCompile-9uPIRj"
-      binary: "/home/daniel/ncs/330rc2/nrf/samples/openthread/coap_server/build/ipc_radio/CMakeFiles/CMakeScratch/TryCompile-9uPIRj"
+      source: "/home/daniel/ncs/330rc2/nrf/samples/openthread/coap_server/build/ipc_radio/CMakeFiles/CMakeScratch/TryCompile-pwjzl5"
+      binary: "/home/daniel/ncs/330rc2/nrf/samples/openthread/coap_server/build/ipc_radio/CMakeFiles/CMakeScratch/TryCompile-pwjzl5"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -5343,12 +5343,12 @@ events:
       variable: "HAVE_STDATOMIC_H"
       cached: true
       stdout: |
-        Change Dir: '/home/daniel/ncs/330rc2/nrf/samples/openthread/coap_server/build/ipc_radio/CMakeFiles/CMakeScratch/TryCompile-9uPIRj'
+        Change Dir: '/home/daniel/ncs/330rc2/nrf/samples/openthread/coap_server/build/ipc_radio/CMakeFiles/CMakeScratch/TryCompile-pwjzl5'
         
-        Run Build Command(s): /home/daniel/ncs/toolchains/911f4c5c26/usr/local/bin/ninja -v cmTC_4a79c
-        [1/2] /home/daniel/ncs/toolchains/911f4c5c26/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc   -c -o CMakeFiles/cmTC_4a79c.dir/HAVE_STDATOMIC_H.c.obj -c /home/daniel/ncs/330rc2/nrf/samples/openthread/coap_server/build/ipc_radio/CMakeFiles/CMakeScratch/TryCompile-9uPIRj/HAVE_STDATOMIC_H.c
-        [2/2] : && /home/daniel/ncs/toolchains/911f4c5c26/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc -c  CMakeFiles/cmTC_4a79c.dir/HAVE_STDATOMIC_H.c.obj -o cmTC_4a79c   && :
-        arm-zephyr-eabi-gcc: warning: CMakeFiles/cmTC_4a79c.dir/HAVE_STDATOMIC_H.c.obj: linker input file unused because linking not done
+        Run Build Command(s): /home/daniel/ncs/toolchains/911f4c5c26/usr/local/bin/ninja -v cmTC_50cdb
+        [1/2] /home/daniel/ncs/toolchains/911f4c5c26/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc   -c -o CMakeFiles/cmTC_50cdb.dir/HAVE_STDATOMIC_H.c.obj -c /home/daniel/ncs/330rc2/nrf/samples/openthread/coap_server/build/ipc_radio/CMakeFiles/CMakeScratch/TryCompile-pwjzl5/HAVE_STDATOMIC_H.c
+        [2/2] : && /home/daniel/ncs/toolchains/911f4c5c26/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc -c  CMakeFiles/cmTC_50cdb.dir/HAVE_STDATOMIC_H.c.obj -o cmTC_50cdb   && :
+        arm-zephyr-eabi-gcc: warning: CMakeFiles/cmTC_50cdb.dir/HAVE_STDATOMIC_H.c.obj: linker input file unused because linking not done
         
       exitCode: 0
   -
@@ -5360,8 +5360,8 @@ events:
     checks:
       - "Looking for include file fcntl.h"
     directories:
-      source: "/home/daniel/ncs/330rc2/nrf/samples/openthread/coap_server/build/ipc_radio/CMakeFiles/CMakeScratch/TryCompile-XXO778"
-      binary: "/home/daniel/ncs/330rc2/nrf/samples/openthread/coap_server/build/ipc_radio/CMakeFiles/CMakeScratch/TryCompile-XXO778"
+      source: "/home/daniel/ncs/330rc2/nrf/samples/openthread/coap_server/build/ipc_radio/CMakeFiles/CMakeScratch/TryCompile-jjKO8A"
+      binary: "/home/daniel/ncs/330rc2/nrf/samples/openthread/coap_server/build/ipc_radio/CMakeFiles/CMakeScratch/TryCompile-jjKO8A"
     cmakeVariables:
       CMAKE_C_FLAGS: " -Wall -Wextra"
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -5371,12 +5371,12 @@ events:
       variable: "HAVE_FCNTL_H"
       cached: true
       stdout: |
-        Change Dir: '/home/daniel/ncs/330rc2/nrf/samples/openthread/coap_server/build/ipc_radio/CMakeFiles/CMakeScratch/TryCompile-XXO778'
+        Change Dir: '/home/daniel/ncs/330rc2/nrf/samples/openthread/coap_server/build/ipc_radio/CMakeFiles/CMakeScratch/TryCompile-jjKO8A'
         
-        Run Build Command(s): /home/daniel/ncs/toolchains/911f4c5c26/usr/local/bin/ninja -v cmTC_7298d
-        [1/2] /home/daniel/ncs/toolchains/911f4c5c26/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc   -Wall -Wextra -c -o CMakeFiles/cmTC_7298d.dir/HAVE_FCNTL_H.c.obj -c /home/daniel/ncs/330rc2/nrf/samples/openthread/coap_server/build/ipc_radio/CMakeFiles/CMakeScratch/TryCompile-XXO778/HAVE_FCNTL_H.c
-        [2/2] : && /home/daniel/ncs/toolchains/911f4c5c26/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc -Wall -Wextra -c  CMakeFiles/cmTC_7298d.dir/HAVE_FCNTL_H.c.obj -o cmTC_7298d   && :
-        arm-zephyr-eabi-gcc: warning: CMakeFiles/cmTC_7298d.dir/HAVE_FCNTL_H.c.obj: linker input file unused because linking not done
+        Run Build Command(s): /home/daniel/ncs/toolchains/911f4c5c26/usr/local/bin/ninja -v cmTC_98eec
+        [1/2] /home/daniel/ncs/toolchains/911f4c5c26/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc   -Wall -Wextra -c -o CMakeFiles/cmTC_98eec.dir/HAVE_FCNTL_H.c.obj -c /home/daniel/ncs/330rc2/nrf/samples/openthread/coap_server/build/ipc_radio/CMakeFiles/CMakeScratch/TryCompile-jjKO8A/HAVE_FCNTL_H.c
+        [2/2] : && /home/daniel/ncs/toolchains/911f4c5c26/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc -Wall -Wextra -c  CMakeFiles/cmTC_98eec.dir/HAVE_FCNTL_H.c.obj -o cmTC_98eec   && :
+        arm-zephyr-eabi-gcc: warning: CMakeFiles/cmTC_98eec.dir/HAVE_FCNTL_H.c.obj: linker input file unused because linking not done
         
       exitCode: 0
   -

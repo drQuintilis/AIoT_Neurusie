@@ -561,6 +561,17 @@
     ]
   ],
   [
+    "CONFIG_DT_HAS_WORLDSEMI_WS2812_SPI_ENABLED",
+    "n",
+    "bool",
+    "y",
+    "default",
+    [
+      "/home/daniel/ncs/330rc2/nrf/samples/openthread/coap_server/build/coap_server/Kconfig/Kconfig.dts",
+      14828
+    ]
+  ],
+  [
     "CONFIG_DT_HAS_ZEPHYR_BT_HCI_IPC_ENABLED",
     "n",
     "bool",
@@ -686,7 +697,8 @@
     "y",
     "select",
     [
-      "SPI_NOR && DT_HAS_JEDEC_SPI_NOR_ENABLED && FLASH"
+      "SPI_NOR && DT_HAS_JEDEC_SPI_NOR_ENABLED && FLASH",
+      "WS2812_STRIP_SPI && DT_HAS_WORLDSEMI_WS2812_SPI_ENABLED && LED_STRIP"
     ]
   ],
   [
@@ -1321,7 +1333,7 @@
     "assign",
     [
       "/home/daniel/ncs/330rc2/nrf/samples/openthread/coap_server/prj.conf",
-      38
+      35
     ]
   ],
   [
@@ -15491,6 +15503,101 @@
     "CONFIG_LED_STRIP",
     "y",
     "bool",
+    "y",
+    "assign",
+    [
+      "/home/daniel/ncs/330rc2/nrf/samples/openthread/coap_server/prj.conf",
+      41
+    ]
+  ],
+  [
+    "CONFIG_LED_STRIP_LOG_LEVEL_OFF",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_LED_STRIP_LOG_LEVEL_ERR",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_LED_STRIP_LOG_LEVEL_WRN",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_LED_STRIP_LOG_LEVEL_INF",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_LED_STRIP_LOG_LEVEL_DBG",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_LED_STRIP_LOG_LEVEL_DEFAULT",
+    "y",
+    "bool",
+    "y",
+    "default",
+    [
+      "/home/daniel/ncs/330rc2/zephyr/subsys/logging/Kconfig.template.log_config",
+      5
+    ]
+  ],
+  [
+    "CONFIG_LED_STRIP_LOG_LEVEL",
+    "n",
+    "int",
+    "3",
+    "default",
+    [
+      "/home/daniel/ncs/330rc2/zephyr/subsys/logging/Kconfig.template.log_config",
+      36
+    ]
+  ],
+  [
+    "CONFIG_LED_STRIP_INIT_PRIORITY",
+    "y",
+    "int",
+    "90",
+    "default",
+    [
+      "/home/daniel/ncs/330rc2/zephyr/drivers/led_strip/Kconfig",
+      20
+    ]
+  ],
+  [
+    "CONFIG_WS2812_STRIP_SPI",
+    "y",
+    "bool",
+    "y",
+    "assign",
+    [
+      "/home/daniel/ncs/330rc2/nrf/samples/openthread/coap_server/prj.conf",
+      42
+    ]
+  ],
+  [
+    "CONFIG_WS2812_STRIP_SPI_FORCE_NOCACHE",
+    "y",
+    "bool",
     null,
     "unset",
     null
@@ -18318,7 +18425,7 @@
     "assign",
     [
       "/home/daniel/ncs/330rc2/nrf/samples/openthread/coap_server/prj.conf",
-      40
+      37
     ]
   ],
   [

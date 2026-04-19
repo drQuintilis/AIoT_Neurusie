@@ -36,4 +36,6 @@ empty_file.o: /home/daniel/ncs/330rc2/zephyr/misc/empty_file.c \
  /home/daniel/ncs/330rc2/zephyr/dts/vendor/nordic/nrf5340_sram_partition.dtsi \
  /home/daniel/ncs/330rc2/zephyr/dts/vendor/nordic/nrf5340_shared_sram_partition.dtsi \
  /home/daniel/ncs/330rc2/zephyr/boards/nordic/nrf7002dk/nrf70_common.dtsi \
- /home/daniel/ncs/330rc2/zephyr/boards/nordic/nrf7002dk/nrf70_common_5g.dtsi
+ /home/daniel/ncs/330rc2/zephyr/boards/nordic/nrf7002dk/nrf70_common_5g.dtsi \
+ /home/daniel/ncs/330rc2/nrf/samples/openthread/coap_server/app.overlay \
+ /home/daniel/ncs/330rc2/zephyr/include/zephyr/dt-bindings/led/led.h

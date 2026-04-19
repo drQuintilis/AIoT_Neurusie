@@ -99,6 +99,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+  include("/home/daniel/ncs/330rc2/nrf/samples/openthread/coap_server/build/coap_server/zephyr/drivers/led_strip/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
   include("/home/daniel/ncs/330rc2/nrf/samples/openthread/coap_server/build/coap_server/zephyr/drivers/mbox/cmake_install.cmake")
 endif()
 

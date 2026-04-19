@@ -36,6 +36,7 @@
 		mcuboot-button0 = &button0; /* in zephyr/boards/nordic/nrf7002dk/nrf5340_cpuapp_common.dtsi:116 */
 		mcuboot-led0 = &led0;       /* in zephyr/boards/nordic/nrf7002dk/nrf5340_cpuapp_common.dtsi:117 */
 		watchdog0 = &wdt0;          /* in zephyr/boards/nordic/nrf7002dk/nrf5340_cpuapp_common.dtsi:118 */
+		led-strip = &led_strip;     /* in nrf/samples/openthread/coap_server/app.overlay:19 */
 	};
 
 	/* node '/soc' defined in zephyr/dts/arm/armv8-m.dtsi:6 */
@@ -350,6 +351,17 @@
 					has-dpd;                                                                                      /* in zephyr/boards/nordic/nrf7002dk/nrf5340_cpuapp_common.dtsi:209 */
 					t-enter-dpd = < 0x2710 >;                                                                     /* in zephyr/boards/nordic/nrf7002dk/nrf5340_cpuapp_common.dtsi:210 */
 					t-exit-dpd = < 0x1388 >;                                                                      /* in zephyr/boards/nordic/nrf7002dk/nrf5340_cpuapp_common.dtsi:211 */
+				};
+
+				/* node '/soc/peripheral@40000000/spi@a000/ws2812@0' defined in nrf/samples/openthread/coap_server/app.overlay:4 */
+				led_strip: ws2812@0 {
+					compatible = "worldsemi,ws2812-spi"; /* in nrf/samples/openthread/coap_server/app.overlay:5 */
+					reg = < 0x0 >;                       /* in nrf/samples/openthread/coap_server/app.overlay:6 */
+					spi-max-frequency = < 0x3d0900 >;    /* in nrf/samples/openthread/coap_server/app.overlay:7 */
+					chain-length = < 0x19 >;             /* in nrf/samples/openthread/coap_server/app.overlay:8 */
+					spi-one-frame = < 0x70 >;            /* in nrf/samples/openthread/coap_server/app.overlay:9 */
+					spi-zero-frame = < 0x40 >;           /* in nrf/samples/openthread/coap_server/app.overlay:10 */
+					color-mapping = < 0x2 0x1 0x3 >;     /* in nrf/samples/openthread/coap_server/app.overlay:11 */
 				};
 			};
 

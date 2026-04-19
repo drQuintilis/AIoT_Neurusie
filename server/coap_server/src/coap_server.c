@@ -9,10 +9,24 @@
 #include <zephyr/logging/log.h>
 #include <zephyr/net/openthread.h>
 #include <openthread/thread.h>
+#include <zephyr/device.h>
+#include <zephyr/drivers/led_strip.h>
+#include <stdlib.h>
+#include <string.h>
 
 #include "ot_coap_utils.h"
 
 LOG_MODULE_REGISTER(coap_server, CONFIG_COAP_SERVER_LOG_LEVEL);
+
+#define STRIP_NODE DT_ALIAS(led_strip)
+#if DT_NODE_HAS_STATUS_OKAY(STRIP_NODE)
+#define STRIP_NUM_PIXELS DT_PROP(STRIP_NODE, chain_length)
+#define HAS_LED_STRIP 1
+static const struct device *const strip = DEVICE_DT_GET(STRIP_NODE);
+static struct led_rgb pixels[STRIP_NUM_PIXELS];
+#else
+#define HAS_LED_STRIP 0
+#endif
 
 #if defined(CONFIG_BOARD_NRF7002DK_NRF5340_CPUAPP) || defined(CONFIG_BOARD_NRF7002DK_NRF5340_CPUAPP_NS)
 #define OT_CONNECTION_LED DK_LED1
@@ -118,11 +132,44 @@ static void on_button_changed(uint32_t button_state, uint32_t has_changed)
 	}
 }
 
-static void on_distance_request(const char *payload, uint16_t len)
+static void set_all_pixels(uint8_t r, uint8_t g, uint8_t b)
 {
-	LOG_INF("Distance updated: %s", payload);
+#if HAS_LED_STRIP
+        for (int i = 0; i < STRIP_NUM_PIXELS; i++) {
+                pixels[i].r = r;
+                pixels[i].g = g;
+                pixels[i].b = b;
+        }
+        led_strip_update_rgb(strip, pixels, STRIP_NUM_PIXELS);
+#endif
 }
 
+static void update_traffic_light(int distance_mm)
+{
+        if (distance_mm < 100) {
+                /* Red */
+                set_all_pixels(100, 0, 0);
+        } else if (distance_mm < 500) {
+                /* Yellow */
+                set_all_pixels(100, 100, 0);
+        } else {
+                /* Green */
+                set_all_pixels(0, 100, 0);
+        }
+}
+
+static void on_distance_request(const char *payload, uint16_t len)
+{
+        LOG_INF("Distance updated: %.*s", len, payload);
+        
+        char buf[16];
+        uint16_t copy_len = len < sizeof(buf) - 1 ? len : sizeof(buf) - 1;
+        memcpy(buf, payload, copy_len);
+        buf[copy_len] = '\0';
+        
+        int distance = atoi(buf);
+        update_traffic_light(distance);
+}
 static void on_thread_state_changed(otChangedFlags flags, void *user_data)
 {
 	if (flags & OT_CHANGED_THREAD_ROLE) {
@@ -167,12 +214,20 @@ int main(void)
 		goto end;
 	}
 
-	ret = dk_leds_init();
-	if (ret) {
-		LOG_ERR("Could not initialize leds, err code: %d", ret);
-		goto end;
-	}
-
+	        ret = dk_leds_init();
+	        if (ret) {
+	                LOG_ERR("Could not initialize leds, err code: %d", ret);
+	                goto end;
+	        }
+	
+	#if HAS_LED_STRIP
+	        if (device_is_ready(strip)) {
+	                LOG_INF("Found LED strip device %s", strip->name);
+	                set_all_pixels(0, 0, 0);
+	        } else {
+	                LOG_ERR("LED strip device %s is not ready", strip->name);
+	        }
+	#endif
 	ret = dk_buttons_init(on_button_changed);
 	if (ret) {
 		LOG_ERR("Cannot init buttons (error: %d)", ret);

@@ -112,7 +112,7 @@ Zephyr_DIR:PATH=/home/daniel/ncs/330rc2/zephyr/share/zephyr-package/cmake
 coap_server_CONF_FILE:UNINITIALIZED=prj.conf
 
 //No help, variable specified on the command line.
-coap_server_DEBUG_THREAD_INFO:UNINITIALIZED=On
+coap_server_DEBUG_THREAD_INFO:UNINITIALIZED=Off
 
 //No help, variable specified on the command line.
 coap_server_EXTRA_CONF_FILE:UNINITIALIZED=boards/nrf5340dk_nrf5340_cpuapp.conf

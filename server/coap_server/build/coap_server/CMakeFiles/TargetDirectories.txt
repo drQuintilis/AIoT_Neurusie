@@ -603,6 +603,13 @@
 /home/daniel/ncs/330rc2/nrf/samples/openthread/coap_server/build/coap_server/zephyr/drivers/gpio/CMakeFiles/install.dir
 /home/daniel/ncs/330rc2/nrf/samples/openthread/coap_server/build/coap_server/zephyr/drivers/gpio/CMakeFiles/install/local.dir
 /home/daniel/ncs/330rc2/nrf/samples/openthread/coap_server/build/coap_server/zephyr/drivers/gpio/CMakeFiles/install/strip.dir
+/home/daniel/ncs/330rc2/nrf/samples/openthread/coap_server/build/coap_server/zephyr/drivers/led_strip/CMakeFiles/drivers__led_strip.dir
+/home/daniel/ncs/330rc2/nrf/samples/openthread/coap_server/build/coap_server/zephyr/drivers/led_strip/CMakeFiles/edit_cache.dir
+/home/daniel/ncs/330rc2/nrf/samples/openthread/coap_server/build/coap_server/zephyr/drivers/led_strip/CMakeFiles/rebuild_cache.dir
+/home/daniel/ncs/330rc2/nrf/samples/openthread/coap_server/build/coap_server/zephyr/drivers/led_strip/CMakeFiles/list_install_components.dir
+/home/daniel/ncs/330rc2/nrf/samples/openthread/coap_server/build/coap_server/zephyr/drivers/led_strip/CMakeFiles/install.dir
+/home/daniel/ncs/330rc2/nrf/samples/openthread/coap_server/build/coap_server/zephyr/drivers/led_strip/CMakeFiles/install/local.dir
+/home/daniel/ncs/330rc2/nrf/samples/openthread/coap_server/build/coap_server/zephyr/drivers/led_strip/CMakeFiles/install/strip.dir
 /home/daniel/ncs/330rc2/nrf/samples/openthread/coap_server/build/coap_server/zephyr/drivers/mbox/CMakeFiles/drivers__mbox.dir
 /home/daniel/ncs/330rc2/nrf/samples/openthread/coap_server/build/coap_server/zephyr/drivers/mbox/CMakeFiles/edit_cache.dir
 /home/daniel/ncs/330rc2/nrf/samples/openthread/coap_server/build/coap_server/zephyr/drivers/mbox/CMakeFiles/rebuild_cache.dir

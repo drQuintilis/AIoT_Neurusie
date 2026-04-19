@@ -14,6 +14,7 @@ cmake:
      - '/home/daniel/ncs/330rc2/zephyr/dts/bindings'
     files:
      - '/home/daniel/ncs/330rc2/zephyr/boards/nordic/nrf7002dk/nrf7002dk_nrf5340_cpuapp_ns.dts'
+     - '/home/daniel/ncs/330rc2/nrf/samples/openthread/coap_server/app.overlay'
     include-dirs:
      - '/home/daniel/ncs/330rc2/nrf/include'
      - '/home/daniel/ncs/330rc2/nrf/dts/common'
@@ -34,6 +35,8 @@ cmake:
      - '/home/daniel/ncs/330rc2/zephyr/dts/arm'
      - '/home/daniel/ncs/330rc2/zephyr/dts/arc'
      - '/home/daniel/ncs/330rc2/zephyr/dts'
+    user-files:
+     - '/home/daniel/ncs/330rc2/nrf/samples/openthread/coap_server/app.overlay'
   images:
    - name: 'tfm'
      source-dir: '/home/daniel/ncs/330rc2/modules/tee/tf-m/trusted-firmware-m'

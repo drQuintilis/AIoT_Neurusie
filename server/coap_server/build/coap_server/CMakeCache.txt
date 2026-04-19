@@ -341,7 +341,7 @@ DTC:FILEPATH=/home/daniel/ncs/toolchains/911f4c5c26/usr/bin/dtc
 // parameter. These settings will override the settings in the
 // board's .dts file. Multiple files may be listed, e.g. DTC_OVERLAY_FILE="dts1.overlay
 // dts2.overlay"
-DTC_OVERLAY_FILE:STRING=
+DTC_OVERLAY_FILE:STRING=/home/daniel/ncs/330rc2/nrf/samples/openthread/coap_server/app.overlay
 
 //Use to ensure we add links only once
 EXTERNAL_CRYPTO_CORE_HANDLED_PSA_CRYPTO_CONFIG:BOOL=False
@@ -1133,7 +1133,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=241
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=242
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

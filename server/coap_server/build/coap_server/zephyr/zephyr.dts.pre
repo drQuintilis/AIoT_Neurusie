@@ -1495,4 +1495,28 @@ wifi-max-tx-pwr-5g-high-mcs7 = <13>;
  };
 };
 # 0 "<command-line>" 2
+# 1 "/home/daniel/ncs/330rc2/nrf/samples/openthread/coap_server/app.overlay" 1
+# 1 "/home/daniel/ncs/330rc2/zephyr/include/zephyr/dt-bindings/led/led.h" 1 3 4
+# 2 "/home/daniel/ncs/330rc2/nrf/samples/openthread/coap_server/app.overlay" 2
+
+&spi4 {
+ led_strip: ws2812@0 {
+  compatible = "worldsemi,ws2812-spi";
+  reg = <0>;
+  spi-max-frequency = <4000000>;
+  chain-length = <25>;
+  spi-one-frame = <0x70>;
+  spi-zero-frame = <0x40>;
+  color-mapping = <2
+     1
+     3>;
+ };
+};
+
+/ {
+ aliases {
+  led-strip = &led_strip;
+ };
+};
+# 0 "<command-line>" 2
 # 1 "/home/daniel/ncs/330rc2/zephyr/misc/empty_file.c"
